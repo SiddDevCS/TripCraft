@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		460702A52D7B61D90012385A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460702A42D7B61D90012385A /* StoreKit.framework */; };
+		46F84CFA2D7F53AF00D67E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F84C892D7F53AF00D67E89 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		460701E42D7630EA0012385A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		460701D32D7630E60012385A /* TripCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		460701E32D7630EA0012385A /* TripCraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripCraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		460701ED2D7630EA0012385A /* TripCraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripCraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		460702A42D7B61D90012385A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		46F84C892D7F53AF00D67E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460702A52D7B61D90012385A /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +83,11 @@
 		460701CA2D7630E60012385A = {
 			isa = PBXGroup;
 			children = (
+				46F84C892D7F53AF00D67E89 /* Assets.xcassets */,
 				460701D52D7630E60012385A /* TripCraft */,
 				460701E62D7630EA0012385A /* TripCraftTests */,
 				460701F02D7630EA0012385A /* TripCraftUITests */,
+				460702A32D7B61D80012385A /* Frameworks */,
 				460701D42D7630E60012385A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +100,14 @@
 				460701ED2D7630EA0012385A /* TripCraftUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		460702A32D7B61D80012385A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				460702A42D7B61D90012385A /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +213,8 @@
 			);
 			mainGroup = 460701CA2D7630E60012385A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 460701D42D7630E60012385A /* Products */;
 			projectDirPath = "";
@@ -212,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F84CFA2D7F53AF00D67E89 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,19 +412,28 @@
 		460701F82D7630EA0012385A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = TripCraft;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TripCraft/Preview Content\"";
 				DEVELOPMENT_TEAM = 2AS6K82NJ8;
+				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = TripCraft;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "TripCraft needs access to your camera to take photos for your journal entries";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "TripCraft needs your location to tag your journal entries";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "TripCraft needs access to your microphone to record your voice for translation.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "TripCraft needs access to your photos to add them to your journal entries";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "TripCraft needs access to speech recognition to translate your spoken words into different languages.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,28 +441,41 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddharthsehgal.TripCraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		460701F92D7630EA0012385A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = TripCraft;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TripCraft/Preview Content\"";
 				DEVELOPMENT_TEAM = 2AS6K82NJ8;
+				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = TripCraft;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "TripCraft needs access to your camera to take photos for your journal entries";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "TripCraft needs your location to tag your journal entries";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "TripCraft needs access to your microphone to record your voice for translation.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "TripCraft needs access to your photos to add them to your journal entries";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "TripCraft needs access to speech recognition to translate your spoken words into different languages.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,9 +483,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddharthsehgal.TripCraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
