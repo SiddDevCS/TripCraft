@@ -2,6 +2,8 @@
 
 TripCraft is a comprehensive travel companion app that helps users plan and manage their trips efficiently. The app includes features like packing lists, travel tools, a travel journal, and more.
 
+![Uploading Untitled design (2).png…]()
+
 ## Features
 
 - **Packing List**: Create and manage packing lists for your trips with AI assistance
